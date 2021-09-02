@@ -29,7 +29,7 @@ public class Crab extends Actor
         }
         if(Greenfoot.isKeyDown("left"))
         {
-            turn(4);
+            turn(-4);
         }
         if(Greenfoot.isKeyDown("up"))
         {
@@ -38,12 +38,23 @@ public class Crab extends Actor
     }
     //Checks for collisions with other objects
     private void onCollision()
-    {
-        if(isTouching(Worm.class))
+        {
+            if(isTouching(Worm.class))
         {
             removeTouching(Worm.class);
             Greenfoot.playSound("slurp.wav");
+            //Winning the game
+            if(getWorld().getObjects(Worm.class).size()==0)
+            {
+                Greenfoot.setWorld(new WinSplash());
+                Greenfoot.playSound("fanfare.wav");
+                Greenfoot.stop();
+            }
+        }
+            if(isTouching(Lobster.class))
+        {
+                Greenfoot.playSound("au.wav");
+                Greenfoot.stop();
         }
     }
-}
-
+}    
