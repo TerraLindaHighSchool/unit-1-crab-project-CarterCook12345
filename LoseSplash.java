@@ -1,21 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class WinSplash here.
- * The screen that you get if you win
- * Carter Cook
+ * Write a description of class LoseSplash here.
+ * 
+ * @author (your name) 
  * @version (a version number or a date)
  */
-public class WinSplash extends World
+public class LoseSplash extends World
 {
 
     /**
-     * Constructor for objects of class WinSplash.
+     * Constructor for objects of class LoseSplash.
      * 
      */
-    public WinSplash()
+    public LoseSplash()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(560, 560, 1); 
+        super(600, 400, 1); 
     }
 }

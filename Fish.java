@@ -3,7 +3,7 @@ import greenfoot.*;
 /**
  * This class defines a crab. Crabs live on the beach.
  */
-public class Crab extends Actor
+public class Fish extends Actor
 {
     public void act()
     {
@@ -31,29 +31,37 @@ public class Crab extends Actor
         {
             turn(-4);
         }
-        if(Greenfoot.isKeyDown("up"))
-        {
-            Greenfoot.delay(60);
-        }
     }
     //Checks for collisions with other objects
     private void onCollision()
         {
-            if(isTouching(Worm.class))
+            if(isTouching(FishFood.class))
         {
-            removeTouching(Worm.class);
+            removeTouching(FishFood.class);
             Greenfoot.playSound("slurp.wav");
             //Winning the game
-            if(getWorld().getObjects(Worm.class).size()==0)
+            if(getWorld().getObjects(FishFood.class).size()==0)
             {
                 Greenfoot.setWorld(new WinSplash());
                 Greenfoot.playSound("fanfare.wav");
                 Greenfoot.stop();
             }
         }
-            if(isTouching(Lobster.class))
+            if(isTouching(MeanFish.class))
         {
                 Greenfoot.playSound("au.wav");
+                Greenfoot.setWorld(new LoseSplash());
+                Greenfoot.stop();
+        }    if(isTouching(Bomb.class))
+        {
+                Greenfoot.playSound("au.wav");
+                Greenfoot.setWorld(new LoseSplash());
+                Greenfoot.stop();
+        
+        }    if(isTouching(MeanFish2.class))
+        {
+                Greenfoot.playSound("au.wav");
+                Greenfoot.setWorld(new LoseSplash());
                 Greenfoot.stop();
         }
     }

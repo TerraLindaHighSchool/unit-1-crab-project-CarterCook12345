@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Lobster here.
- * 
- * @author (your name) 
+ * Write a description of class MeanFish here.
+ * A mean fish that turns around the world, ends the game if touched by player
+ * Carter Cook 
  * @version (a version number or a date)
  */
-public class Lobster extends Actor
+public class MeanFish extends Actor
 {
     /**
      * Act - do whatever the Lobster wants to do. This method is called whenever
@@ -14,7 +14,7 @@ public class Lobster extends Actor
      */
     public void act()
     {
-        move(3);
+        move(5);
         turnAtEdge();
     }
 //Turns the Crab at the edge

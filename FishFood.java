@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Worm here.
- * 
- * @author (your name) 
+ * Write a description of class FishFood here.
+ * Fish food that the play must eat all of to win.
+ * Carter Cook
  * @version (a version number or a date)
  */
-public class Worm extends Actor
+public class FishFood extends Actor
 {
     /**
      * Act - do whatever the Worm wants to do. This method is called whenever
