@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Carter Cook 
  * @version (a version number or a date)
  */
-public class MeanFish2 extends Actor
+public class MeanFish4 extends Actor
 {
     /**
      * Act - do whatever the Lobster wants to do. This method is called whenever
@@ -22,7 +22,7 @@ public class MeanFish2 extends Actor
     {
         if (isAtEdge())
         {
-            turn(-50);
+            turn(75);
         }
     }
 }

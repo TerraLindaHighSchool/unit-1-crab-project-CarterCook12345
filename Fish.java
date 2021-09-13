@@ -7,7 +7,6 @@ public class Fish extends Actor
 {
     public void act()
     {
-        move(3);
         turnAtEdge();
         checkKeyPress();
         onCollision();
@@ -17,19 +16,27 @@ public class Fish extends Actor
     {
         if (isAtEdge())
         {
-            turn(50);
+            Greenfoot.playSound("au.wav");
         }
     }
     //Checks for user key prsses so user can turn the Crab
     private void checkKeyPress()
     {
-        if(Greenfoot.isKeyDown("right"))
+        if(Greenfoot.isKeyDown("up"))
         {
-            turn(4);
+            setLocation(getX(), getY()-3);
+        }
+        if(Greenfoot.isKeyDown("down"))
+        {
+            setLocation(getX(), getY()+3);
         }
         if(Greenfoot.isKeyDown("left"))
         {
-            turn(-4);
+            setLocation(getX()-3, getY());
+        }
+        if(Greenfoot.isKeyDown("right"))
+        {
+            setLocation(getX()+3, getY());
         }
     }
     //Checks for collisions with other objects
@@ -59,6 +66,18 @@ public class Fish extends Actor
                 Greenfoot.stop();
         
         }    if(isTouching(MeanFish2.class))
+        {
+                Greenfoot.playSound("au.wav");
+                Greenfoot.setWorld(new LoseSplash());
+                Greenfoot.stop();
+        }
+            if(isTouching(MeanFish3.class))
+        {
+                Greenfoot.playSound("au.wav");
+                Greenfoot.setWorld(new LoseSplash());
+                Greenfoot.stop();
+        }
+            if(isTouching(MeanFish4.class))
         {
                 Greenfoot.playSound("au.wav");
                 Greenfoot.setWorld(new LoseSplash());

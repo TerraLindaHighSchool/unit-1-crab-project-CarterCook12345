@@ -38,15 +38,22 @@ public class Ocean extends World
         addObject(worm8,214,334);
         MeanFish lobster = new MeanFish();
         addObject(lobster,77,64);
-        Bomb bomb = new Bomb();
-        addObject(bomb,444,395);
-        Bomb bomb2 = new Bomb();
-        addObject(bomb2,92,452);
-        Bomb bomb3 = new Bomb();
-        addObject(bomb3,283,56);
         MeanFish2 meanFish2 = new MeanFish2();
         addObject(meanFish2,279,402);
         FishFood fishFood9 = new FishFood();
         addObject(fishFood9,428,504);
+        MeanFish3 meanFish3 = new MeanFish3();
+        addObject(meanFish3,399,174);
+        MeanFish4 meanFish4 = new MeanFish4();
+        addObject(meanFish4,109,319);
+        for(int i = 0; i < 3; i++)
+        {
+            Bomb bomb = new Bomb();
+            int imageWidth = bomb.getImage().getWidth();
+            int imageHeight = bomb.getImage().getHeight();
+            int xpos = imageWidth + Greenfoot.getRandomNumber(getWidth() - 2 * imageWidth);
+            int ypos = imageHeight + Greenfoot.getRandomNumber(getHeight() - 2 * imageHeight);
+            addObject(bomb,xpos,ypos);    
+        }
     }
 }
