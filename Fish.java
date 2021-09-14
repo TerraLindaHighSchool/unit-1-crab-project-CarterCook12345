@@ -5,11 +5,17 @@ import greenfoot.*;
  */
 public class Fish extends Actor
 {
+    int tick=0;
     public void act()
     {
         turnAtEdge();
         checkKeyPress();
         onCollision();
+        if(tick==0)
+        {
+            Greenfoot.playSound("bgm.mp3");
+        }
+        tick++;
     }
     //Turns the Crab at the edge
     private void turnAtEdge()

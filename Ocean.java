@@ -55,5 +55,14 @@ public class Ocean extends World
             int ypos = imageHeight + Greenfoot.getRandomNumber(getHeight() - 2 * imageHeight);
             addObject(bomb,xpos,ypos);    
         }
+        for(int i = 0; i < 3; i++)
+        {
+            FishFood fishfood = new FishFood();
+            int imageWidth = fishfood.getImage().getWidth();
+            int imageHeight = fishfood.getImage().getHeight();
+            int xpos = imageWidth + Greenfoot.getRandomNumber(getWidth() - 2 * imageWidth);
+            int ypos = imageHeight + Greenfoot.getRandomNumber(getHeight() - 2 * imageHeight);
+            addObject(fishfood,xpos,ypos);    
+        }
     }
 }
