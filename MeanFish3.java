@@ -14,7 +14,7 @@ public class MeanFish3 extends Actor
      */
     public void act()
     {
-        move(7);
+        move(6);
         turnAtEdge();
     }
 //Turns the Crab at the edge
